@@ -1,0 +1,49 @@
+syntax = "proto3"; // 版本声明，使用Protocol Buffers v3版本
+
+package pb; // 包名
+
+option go_package = "mozzarella-keycenter/rpc/pb;rpc";
+
+// 定义服务
+service MozzarellaBook {
+  // Ping 方法
+  rpc Ping (PingRequest) returns (PingReply) {}
+
+  rpc Key (KeyRequest) returns (KeyReturn) {}
+  rpc CreateToken (CreateTokenReq) returns (CreateTokenResp) {}
+  rpc VerifyToken (VerifyTokenReq) returns (VerifyTokenResp) {}
+}
+
+// 请求消息
+message PingRequest {
+}
+
+// 响应消息
+message PingReply {
+  string Pong = 1;
+}
+
+message KeyRequest {
+  string Domain =1;
+}
+
+message KeyReturn {
+  bytes PublicKey = 1;
+}
+
+message CreateTokenReq {
+  string Domain = 1;
+  string Uid =2;
+}
+
+message CreateTokenResp {
+  string Token = 1;
+}
+
+
+message VerifyTokenReq {
+  string Token = 1;
+}
+
+message VerifyTokenResp {
+}
