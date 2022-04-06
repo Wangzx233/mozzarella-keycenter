@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func CreateToken(Domain string, Uid string) (token string, err error) {
+func CreateToken(Domain string, Uid string) (token string, rt string, err error) {
 	//构建payload
 	var payload = Payload{
 		StandardPayload: StandardPayload{
@@ -49,6 +49,8 @@ func CreateToken(Domain string, Uid string) (token string, err error) {
 	signatrue := base64.URLEncoding.EncodeToString(sig)
 	//组合token
 	token = strings.Join([]string{pay, signatrue}, ".")
+
+	rt = CreateRefreshToken(bytesPayload, config.RefreshRefreshTokenExpiresTime)
 
 	return
 }

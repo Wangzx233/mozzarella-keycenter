@@ -12,6 +12,10 @@ import (
 
 func VerifyToken(token string) (err error) {
 	part := strings.Split(token, ".")
+	if len(part) < 2 {
+		err = errors.New("token err")
+		return
+	}
 	if part[0] == "" || part[1] == "" {
 		err = errors.New("token err")
 		return

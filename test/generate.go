@@ -2,30 +2,58 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"crypto/rand"
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
+	"fmt"
+	"google.golang.org/grpc"
 	"io"
 	"log"
-	"mozzarella-keycenter/token"
+	"mozzarella-keycenter/pb"
 	"os"
 )
 
 func main() {
 	//GenerateRsaKey(2048)
 
-	t, err := token.CreateToken("123", "111")
+	//t, err := token.CreateToken("123", "111")
+	//if err != nil {
+	//	log.Println(err)
+	//
+	//	return
+	//}
+	//err = token.VerifyToken(t)
+	//if err != nil {
+	//	log.Println(err)
+	//	return
+	//}
+	// 连接服务器
+	conn, err := grpc.Dial("8.142.81.74:8901", grpc.WithInsecure())
 	if err != nil {
-		log.Println(err)
+		fmt.Printf("faild to connect: %v", err)
+		return
+	}
+	defer conn.Close()
 
-		return
-	}
-	err = token.VerifyToken(t)
+	c := pb.NewMozzarellaBookClient(conn)
+	token, err := c.CreateToken(context.Background(), &pb.CreateTokenReq{
+		Domain: "123",
+		Uid:    "11",
+	})
+
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
 		return
 	}
+	// 调用服务端的SayHello
+	r, err := c.VerifyToken(context.Background(), &pb.VerifyTokenReq{Token: token.Token + "123"})
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(r)
 }
 
 // GenerateRsaKey 生成rsa私钥和公钥并写入磁盘文件

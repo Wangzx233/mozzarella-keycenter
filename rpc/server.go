@@ -17,13 +17,12 @@ type KeyCenter struct {
 }
 
 func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res *pb.CreateTokenResp, err error) {
-	token, err := token.CreateToken(req.Domain, req.Uid)
+	tk, err := token.CreateToken(req.Domain, req.Uid)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	res.Token = token
-	return
+	return &pb.CreateTokenResp{Token: tk}, nil
 }
 
 func (k *KeyCenter) VerifyToken(c context.Context, req *pb.VerifyTokenReq) (res *pb.VerifyTokenResp, err error) {
@@ -39,18 +38,16 @@ func (k *KeyCenter) Key(c context.Context, req *pb.KeyRequest) (res *pb.KeyRetur
 	if err != nil {
 		return
 	}
-	res.PublicKey = Key.PublicKey
-	return
+	return &pb.KeyReturn{PublicKey: Key.PublicKey}, nil
 }
 
 func (k *KeyCenter) Ping(c context.Context, req *pb.PingRequest) (res *pb.PingReply, err error) {
-	res.Pong = "pong"
-	return
+	return &pb.PingReply{Pong: "pong"}, nil
 }
 
 func InitRpc() {
 	// 监听本地的8972端口
-	lis, err := net.Listen("tcp", ":8972")
+	lis, err := net.Listen("tcp", ":8901")
 	if err != nil {
 		fmt.Printf("failed to listen: %v", err)
 		return

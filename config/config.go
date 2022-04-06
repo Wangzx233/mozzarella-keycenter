@@ -10,4 +10,6 @@ const (
 	DefaultTokenNotBefore   = 0
 	DefaultTokenIssuer      = "key-center"
 	DefaultTokenAudience    = "user"
+
+	RefreshRefreshTokenExpiresTime = time.Hour * 24 * 30
 )

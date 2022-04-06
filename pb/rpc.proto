@@ -12,6 +12,7 @@ service MozzarellaBook {
   rpc Key (KeyRequest) returns (KeyReturn) {}
   rpc CreateToken (CreateTokenReq) returns (CreateTokenResp) {}
   rpc VerifyToken (VerifyTokenReq) returns (VerifyTokenResp) {}
+  rpc RefreshToken (RefreshTokenReq) returns (RefreshTokenResp) {}
 }
 
 // 请求消息
@@ -38,6 +39,7 @@ message CreateTokenReq {
 
 message CreateTokenResp {
   string Token = 1;
+  string RefreshToken = 2;
 }
 
 
@@ -46,4 +48,14 @@ message VerifyTokenReq {
 }
 
 message VerifyTokenResp {
+  bool ok = 1 ;
+}
+
+message RefreshTokenReq {
+  string rt =1;
+}
+
+message RefreshTokenResp {
+  string Token = 1;
+  string RefreshToken = 2;
 }
