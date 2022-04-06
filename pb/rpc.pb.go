@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.19.3
-// source: pb/rpc.proto
+// source: rpc.proto
 
 package pb
 
@@ -34,7 +34,7 @@ type PingRequest struct {
 func (x *PingRequest) Reset() {
 	*x = PingRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[0]
+		mi := &file_rpc_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -47,7 +47,7 @@ func (x *PingRequest) String() string {
 func (*PingRequest) ProtoMessage() {}
 
 func (x *PingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[0]
+	mi := &file_rpc_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -60,7 +60,7 @@ func (x *PingRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PingRequest.ProtoReflect.Descriptor instead.
 func (*PingRequest) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{0}
+	return file_rpc_proto_rawDescGZIP(), []int{0}
 }
 
 // 响应消息
@@ -75,7 +75,7 @@ type PingReply struct {
 func (x *PingReply) Reset() {
 	*x = PingReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[1]
+		mi := &file_rpc_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -88,7 +88,7 @@ func (x *PingReply) String() string {
 func (*PingReply) ProtoMessage() {}
 
 func (x *PingReply) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[1]
+	mi := &file_rpc_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -101,7 +101,7 @@ func (x *PingReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PingReply.ProtoReflect.Descriptor instead.
 func (*PingReply) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{1}
+	return file_rpc_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PingReply) GetPong() string {
@@ -122,7 +122,7 @@ type KeyRequest struct {
 func (x *KeyRequest) Reset() {
 	*x = KeyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[2]
+		mi := &file_rpc_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -135,7 +135,7 @@ func (x *KeyRequest) String() string {
 func (*KeyRequest) ProtoMessage() {}
 
 func (x *KeyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[2]
+	mi := &file_rpc_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -148,7 +148,7 @@ func (x *KeyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KeyRequest.ProtoReflect.Descriptor instead.
 func (*KeyRequest) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{2}
+	return file_rpc_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *KeyRequest) GetDomain() string {
@@ -169,7 +169,7 @@ type KeyReturn struct {
 func (x *KeyReturn) Reset() {
 	*x = KeyReturn{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[3]
+		mi := &file_rpc_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -182,7 +182,7 @@ func (x *KeyReturn) String() string {
 func (*KeyReturn) ProtoMessage() {}
 
 func (x *KeyReturn) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[3]
+	mi := &file_rpc_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -195,7 +195,7 @@ func (x *KeyReturn) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KeyReturn.ProtoReflect.Descriptor instead.
 func (*KeyReturn) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{3}
+	return file_rpc_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *KeyReturn) GetPublicKey() []byte {
@@ -217,7 +217,7 @@ type CreateTokenReq struct {
 func (x *CreateTokenReq) Reset() {
 	*x = CreateTokenReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[4]
+		mi := &file_rpc_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -230,7 +230,7 @@ func (x *CreateTokenReq) String() string {
 func (*CreateTokenReq) ProtoMessage() {}
 
 func (x *CreateTokenReq) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[4]
+	mi := &file_rpc_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -243,7 +243,7 @@ func (x *CreateTokenReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTokenReq.ProtoReflect.Descriptor instead.
 func (*CreateTokenReq) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{4}
+	return file_rpc_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CreateTokenReq) GetDomain() string {
@@ -265,13 +265,14 @@ type CreateTokenResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Token string `protobuf:"bytes,1,opt,name=Token,proto3" json:"Token,omitempty"`
+	Token        string `protobuf:"bytes,1,opt,name=Token,proto3" json:"Token,omitempty"`
+	RefreshToken string `protobuf:"bytes,2,opt,name=RefreshToken,proto3" json:"RefreshToken,omitempty"`
 }
 
 func (x *CreateTokenResp) Reset() {
 	*x = CreateTokenResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[5]
+		mi := &file_rpc_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -284,7 +285,7 @@ func (x *CreateTokenResp) String() string {
 func (*CreateTokenResp) ProtoMessage() {}
 
 func (x *CreateTokenResp) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[5]
+	mi := &file_rpc_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -297,12 +298,19 @@ func (x *CreateTokenResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTokenResp.ProtoReflect.Descriptor instead.
 func (*CreateTokenResp) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{5}
+	return file_rpc_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CreateTokenResp) GetToken() string {
 	if x != nil {
 		return x.Token
+	}
+	return ""
+}
+
+func (x *CreateTokenResp) GetRefreshToken() string {
+	if x != nil {
+		return x.RefreshToken
 	}
 	return ""
 }
@@ -318,7 +326,7 @@ type VerifyTokenReq struct {
 func (x *VerifyTokenReq) Reset() {
 	*x = VerifyTokenReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[6]
+		mi := &file_rpc_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -331,7 +339,7 @@ func (x *VerifyTokenReq) String() string {
 func (*VerifyTokenReq) ProtoMessage() {}
 
 func (x *VerifyTokenReq) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[6]
+	mi := &file_rpc_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -344,7 +352,7 @@ func (x *VerifyTokenReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyTokenReq.ProtoReflect.Descriptor instead.
 func (*VerifyTokenReq) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{6}
+	return file_rpc_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *VerifyTokenReq) GetToken() string {
@@ -358,12 +366,14 @@ type VerifyTokenResp struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
+
+	Ok bool `protobuf:"varint,1,opt,name=ok,proto3" json:"ok,omitempty"`
 }
 
 func (x *VerifyTokenResp) Reset() {
 	*x = VerifyTokenResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pb_rpc_proto_msgTypes[7]
+		mi := &file_rpc_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -376,7 +386,7 @@ func (x *VerifyTokenResp) String() string {
 func (*VerifyTokenResp) ProtoMessage() {}
 
 func (x *VerifyTokenResp) ProtoReflect() protoreflect.Message {
-	mi := &file_pb_rpc_proto_msgTypes[7]
+	mi := &file_rpc_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -389,96 +399,223 @@ func (x *VerifyTokenResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyTokenResp.ProtoReflect.Descriptor instead.
 func (*VerifyTokenResp) Descriptor() ([]byte, []int) {
-	return file_pb_rpc_proto_rawDescGZIP(), []int{7}
+	return file_rpc_proto_rawDescGZIP(), []int{7}
 }
 
-var File_pb_rpc_proto protoreflect.FileDescriptor
+func (x *VerifyTokenResp) GetOk() bool {
+	if x != nil {
+		return x.Ok
+	}
+	return false
+}
 
-var file_pb_rpc_proto_rawDesc = []byte{
-	0x0a, 0x0c, 0x70, 0x62, 0x2f, 0x72, 0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x02,
-	0x70, 0x62, 0x22, 0x0d, 0x0a, 0x0b, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x22, 0x1f, 0x0a, 0x09, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x12,
-	0x0a, 0x04, 0x50, 0x6f, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x50, 0x6f,
-	0x6e, 0x67, 0x22, 0x24, 0x0a, 0x0a, 0x4b, 0x65, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x12, 0x16, 0x0a, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x22, 0x29, 0x0a, 0x09, 0x4b, 0x65, 0x79, 0x52,
-	0x65, 0x74, 0x75, 0x72, 0x6e, 0x12, 0x1c, 0x0a, 0x09, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x4b,
-	0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x09, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63,
-	0x4b, 0x65, 0x79, 0x22, 0x3a, 0x0a, 0x0e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b,
-	0x65, 0x6e, 0x52, 0x65, 0x71, 0x12, 0x16, 0x0a, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x12, 0x10, 0x0a,
-	0x03, 0x55, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x55, 0x69, 0x64, 0x22,
-	0x27, 0x0a, 0x0f, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65,
-	0x73, 0x70, 0x12, 0x14, 0x0a, 0x05, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x05, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x26, 0x0a, 0x0e, 0x56, 0x65, 0x72, 0x69,
-	0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x12, 0x14, 0x0a, 0x05, 0x54, 0x6f,
-	0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
-	0x22, 0x11, 0x0a, 0x0f, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52,
-	0x65, 0x73, 0x70, 0x32, 0xd6, 0x01, 0x0a, 0x0e, 0x4d, 0x6f, 0x7a, 0x7a, 0x61, 0x72, 0x65, 0x6c,
-	0x6c, 0x61, 0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x28, 0x0a, 0x04, 0x50, 0x69, 0x6e, 0x67, 0x12, 0x0f,
-	0x2e, 0x70, 0x62, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00,
-	0x12, 0x26, 0x0a, 0x03, 0x4b, 0x65, 0x79, 0x12, 0x0e, 0x2e, 0x70, 0x62, 0x2e, 0x4b, 0x65, 0x79,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x4b, 0x65, 0x79,
-	0x52, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x22, 0x00, 0x12, 0x38, 0x0a, 0x0b, 0x43, 0x72, 0x65, 0x61,
-	0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x12, 0x2e, 0x70, 0x62, 0x2e, 0x43, 0x72, 0x65,
-	0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e, 0x70, 0x62,
-	0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70,
-	0x22, 0x00, 0x12, 0x38, 0x0a, 0x0b, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65,
-	0x6e, 0x12, 0x12, 0x2e, 0x70, 0x62, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b,
-	0x65, 0x6e, 0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e, 0x70, 0x62, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66,
-	0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x22, 0x00, 0x42, 0x21, 0x5a, 0x1f,
-	0x6d, 0x6f, 0x7a, 0x7a, 0x61, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x2d, 0x6b, 0x65, 0x79, 0x63, 0x65,
-	0x6e, 0x74, 0x65, 0x72, 0x2f, 0x72, 0x70, 0x63, 0x2f, 0x70, 0x62, 0x3b, 0x72, 0x70, 0x63, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+type RefreshTokenReq struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Rt string `protobuf:"bytes,1,opt,name=rt,proto3" json:"rt,omitempty"`
+}
+
+func (x *RefreshTokenReq) Reset() {
+	*x = RefreshTokenReq{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rpc_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RefreshTokenReq) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RefreshTokenReq) ProtoMessage() {}
+
+func (x *RefreshTokenReq) ProtoReflect() protoreflect.Message {
+	mi := &file_rpc_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RefreshTokenReq.ProtoReflect.Descriptor instead.
+func (*RefreshTokenReq) Descriptor() ([]byte, []int) {
+	return file_rpc_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *RefreshTokenReq) GetRt() string {
+	if x != nil {
+		return x.Rt
+	}
+	return ""
+}
+
+type RefreshTokenResp struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Token        string `protobuf:"bytes,1,opt,name=Token,proto3" json:"Token,omitempty"`
+	RefreshToken string `protobuf:"bytes,2,opt,name=RefreshToken,proto3" json:"RefreshToken,omitempty"`
+}
+
+func (x *RefreshTokenResp) Reset() {
+	*x = RefreshTokenResp{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rpc_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RefreshTokenResp) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RefreshTokenResp) ProtoMessage() {}
+
+func (x *RefreshTokenResp) ProtoReflect() protoreflect.Message {
+	mi := &file_rpc_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RefreshTokenResp.ProtoReflect.Descriptor instead.
+func (*RefreshTokenResp) Descriptor() ([]byte, []int) {
+	return file_rpc_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *RefreshTokenResp) GetToken() string {
+	if x != nil {
+		return x.Token
+	}
+	return ""
+}
+
+func (x *RefreshTokenResp) GetRefreshToken() string {
+	if x != nil {
+		return x.RefreshToken
+	}
+	return ""
+}
+
+var File_rpc_proto protoreflect.FileDescriptor
+
+var file_rpc_proto_rawDesc = []byte{
+	0x0a, 0x09, 0x72, 0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x02, 0x70, 0x62, 0x22,
+	0x0d, 0x0a, 0x0b, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x1f,
+	0x0a, 0x09, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x12, 0x0a, 0x04, 0x50,
+	0x6f, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x50, 0x6f, 0x6e, 0x67, 0x22,
+	0x24, 0x0a, 0x0a, 0x4b, 0x65, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a,
+	0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x44,
+	0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x22, 0x29, 0x0a, 0x09, 0x4b, 0x65, 0x79, 0x52, 0x65, 0x74, 0x75,
+	0x72, 0x6e, 0x12, 0x1c, 0x0a, 0x09, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x4b, 0x65, 0x79, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x09, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x4b, 0x65, 0x79,
+	0x22, 0x3a, 0x0a, 0x0e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52,
+	0x65, 0x71, 0x12, 0x16, 0x0a, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x44, 0x6f, 0x6d, 0x61, 0x69, 0x6e, 0x12, 0x10, 0x0a, 0x03, 0x55, 0x69,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x55, 0x69, 0x64, 0x22, 0x4b, 0x0a, 0x0f,
+	0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x12,
+	0x14, 0x0a, 0x05, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x22, 0x0a, 0x0c, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x52, 0x65, 0x66,
+	0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x26, 0x0a, 0x0e, 0x56, 0x65, 0x72,
+	0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x12, 0x14, 0x0a, 0x05, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x22, 0x21, 0x0a, 0x0f, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
+	0x52, 0x65, 0x73, 0x70, 0x12, 0x0e, 0x0a, 0x02, 0x6f, 0x6b, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08,
+	0x52, 0x02, 0x6f, 0x6b, 0x22, 0x21, 0x0a, 0x0f, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x12, 0x0e, 0x0a, 0x02, 0x72, 0x74, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x02, 0x72, 0x74, 0x22, 0x4c, 0x0a, 0x10, 0x52, 0x65, 0x66, 0x72, 0x65,
+	0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x12, 0x14, 0x0a, 0x05, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x12, 0x22, 0x0a, 0x0c, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x32, 0x93, 0x02, 0x0a, 0x0e, 0x4d, 0x6f, 0x7a, 0x7a, 0x61, 0x72,
+	0x65, 0x6c, 0x6c, 0x61, 0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x28, 0x0a, 0x04, 0x50, 0x69, 0x6e, 0x67,
+	0x12, 0x0f, 0x2e, 0x70, 0x62, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x70, 0x6c, 0x79,
+	0x22, 0x00, 0x12, 0x26, 0x0a, 0x03, 0x4b, 0x65, 0x79, 0x12, 0x0e, 0x2e, 0x70, 0x62, 0x2e, 0x4b,
+	0x65, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x4b,
+	0x65, 0x79, 0x52, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x22, 0x00, 0x12, 0x38, 0x0a, 0x0b, 0x43, 0x72,
+	0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x12, 0x2e, 0x70, 0x62, 0x2e, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e,
+	0x70, 0x62, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65,
+	0x73, 0x70, 0x22, 0x00, 0x12, 0x38, 0x0a, 0x0b, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54, 0x6f,
+	0x6b, 0x65, 0x6e, 0x12, 0x12, 0x2e, 0x70, 0x62, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e, 0x70, 0x62, 0x2e, 0x56, 0x65, 0x72,
+	0x69, 0x66, 0x79, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x22, 0x00, 0x12, 0x3b,
+	0x0a, 0x0c, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x13,
+	0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
+	0x52, 0x65, 0x71, 0x1a, 0x14, 0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x22, 0x00, 0x42, 0x21, 0x5a, 0x1f, 0x6d,
+	0x6f, 0x7a, 0x7a, 0x61, 0x72, 0x65, 0x6c, 0x6c, 0x61, 0x2d, 0x6b, 0x65, 0x79, 0x63, 0x65, 0x6e,
+	0x74, 0x65, 0x72, 0x2f, 0x72, 0x70, 0x63, 0x2f, 0x70, 0x62, 0x3b, 0x72, 0x70, 0x63, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_pb_rpc_proto_rawDescOnce sync.Once
-	file_pb_rpc_proto_rawDescData = file_pb_rpc_proto_rawDesc
+	file_rpc_proto_rawDescOnce sync.Once
+	file_rpc_proto_rawDescData = file_rpc_proto_rawDesc
 )
 
-func file_pb_rpc_proto_rawDescGZIP() []byte {
-	file_pb_rpc_proto_rawDescOnce.Do(func() {
-		file_pb_rpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_pb_rpc_proto_rawDescData)
+func file_rpc_proto_rawDescGZIP() []byte {
+	file_rpc_proto_rawDescOnce.Do(func() {
+		file_rpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_rpc_proto_rawDescData)
 	})
-	return file_pb_rpc_proto_rawDescData
+	return file_rpc_proto_rawDescData
 }
 
-var file_pb_rpc_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
-var file_pb_rpc_proto_goTypes = []interface{}{
-	(*PingRequest)(nil),     // 0: pb.PingRequest
-	(*PingReply)(nil),       // 1: pb.PingReply
-	(*KeyRequest)(nil),      // 2: pb.KeyRequest
-	(*KeyReturn)(nil),       // 3: pb.KeyReturn
-	(*CreateTokenReq)(nil),  // 4: pb.CreateTokenReq
-	(*CreateTokenResp)(nil), // 5: pb.CreateTokenResp
-	(*VerifyTokenReq)(nil),  // 6: pb.VerifyTokenReq
-	(*VerifyTokenResp)(nil), // 7: pb.VerifyTokenResp
+var file_rpc_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_rpc_proto_goTypes = []interface{}{
+	(*PingRequest)(nil),      // 0: pb.PingRequest
+	(*PingReply)(nil),        // 1: pb.PingReply
+	(*KeyRequest)(nil),       // 2: pb.KeyRequest
+	(*KeyReturn)(nil),        // 3: pb.KeyReturn
+	(*CreateTokenReq)(nil),   // 4: pb.CreateTokenReq
+	(*CreateTokenResp)(nil),  // 5: pb.CreateTokenResp
+	(*VerifyTokenReq)(nil),   // 6: pb.VerifyTokenReq
+	(*VerifyTokenResp)(nil),  // 7: pb.VerifyTokenResp
+	(*RefreshTokenReq)(nil),  // 8: pb.RefreshTokenReq
+	(*RefreshTokenResp)(nil), // 9: pb.RefreshTokenResp
 }
-var file_pb_rpc_proto_depIdxs = []int32{
+var file_rpc_proto_depIdxs = []int32{
 	0, // 0: pb.MozzarellaBook.Ping:input_type -> pb.PingRequest
 	2, // 1: pb.MozzarellaBook.Key:input_type -> pb.KeyRequest
 	4, // 2: pb.MozzarellaBook.CreateToken:input_type -> pb.CreateTokenReq
 	6, // 3: pb.MozzarellaBook.VerifyToken:input_type -> pb.VerifyTokenReq
-	1, // 4: pb.MozzarellaBook.Ping:output_type -> pb.PingReply
-	3, // 5: pb.MozzarellaBook.Key:output_type -> pb.KeyReturn
-	5, // 6: pb.MozzarellaBook.CreateToken:output_type -> pb.CreateTokenResp
-	7, // 7: pb.MozzarellaBook.VerifyToken:output_type -> pb.VerifyTokenResp
-	4, // [4:8] is the sub-list for method output_type
-	0, // [0:4] is the sub-list for method input_type
+	8, // 4: pb.MozzarellaBook.RefreshToken:input_type -> pb.RefreshTokenReq
+	1, // 5: pb.MozzarellaBook.Ping:output_type -> pb.PingReply
+	3, // 6: pb.MozzarellaBook.Key:output_type -> pb.KeyReturn
+	5, // 7: pb.MozzarellaBook.CreateToken:output_type -> pb.CreateTokenResp
+	7, // 8: pb.MozzarellaBook.VerifyToken:output_type -> pb.VerifyTokenResp
+	9, // 9: pb.MozzarellaBook.RefreshToken:output_type -> pb.RefreshTokenResp
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_pb_rpc_proto_init() }
-func file_pb_rpc_proto_init() {
-	if File_pb_rpc_proto != nil {
+func init() { file_rpc_proto_init() }
+func file_rpc_proto_init() {
+	if File_rpc_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_pb_rpc_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PingRequest); i {
 			case 0:
 				return &v.state
@@ -490,7 +627,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PingReply); i {
 			case 0:
 				return &v.state
@@ -502,7 +639,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KeyRequest); i {
 			case 0:
 				return &v.state
@@ -514,7 +651,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KeyReturn); i {
 			case 0:
 				return &v.state
@@ -526,7 +663,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateTokenReq); i {
 			case 0:
 				return &v.state
@@ -538,7 +675,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateTokenResp); i {
 			case 0:
 				return &v.state
@@ -550,7 +687,7 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*VerifyTokenReq); i {
 			case 0:
 				return &v.state
@@ -562,8 +699,32 @@ func file_pb_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_pb_rpc_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_rpc_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*VerifyTokenResp); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_rpc_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RefreshTokenReq); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_rpc_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RefreshTokenResp); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -579,20 +740,20 @@ func file_pb_rpc_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_pb_rpc_proto_rawDesc,
+			RawDescriptor: file_rpc_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pb_rpc_proto_goTypes,
-		DependencyIndexes: file_pb_rpc_proto_depIdxs,
-		MessageInfos:      file_pb_rpc_proto_msgTypes,
+		GoTypes:           file_rpc_proto_goTypes,
+		DependencyIndexes: file_rpc_proto_depIdxs,
+		MessageInfos:      file_rpc_proto_msgTypes,
 	}.Build()
-	File_pb_rpc_proto = out.File
-	file_pb_rpc_proto_rawDesc = nil
-	file_pb_rpc_proto_goTypes = nil
-	file_pb_rpc_proto_depIdxs = nil
+	File_rpc_proto = out.File
+	file_rpc_proto_rawDesc = nil
+	file_rpc_proto_goTypes = nil
+	file_rpc_proto_depIdxs = nil
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -612,6 +773,7 @@ type MozzarellaBookClient interface {
 	Key(ctx context.Context, in *KeyRequest, opts ...grpc.CallOption) (*KeyReturn, error)
 	CreateToken(ctx context.Context, in *CreateTokenReq, opts ...grpc.CallOption) (*CreateTokenResp, error)
 	VerifyToken(ctx context.Context, in *VerifyTokenReq, opts ...grpc.CallOption) (*VerifyTokenResp, error)
+	RefreshToken(ctx context.Context, in *RefreshTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error)
 }
 
 type mozzarellaBookClient struct {
@@ -658,6 +820,15 @@ func (c *mozzarellaBookClient) VerifyToken(ctx context.Context, in *VerifyTokenR
 	return out, nil
 }
 
+func (c *mozzarellaBookClient) RefreshToken(ctx context.Context, in *RefreshTokenReq, opts ...grpc.CallOption) (*RefreshTokenResp, error) {
+	out := new(RefreshTokenResp)
+	err := c.cc.Invoke(ctx, "/pb.MozzarellaBook/RefreshToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MozzarellaBookServer is the server API for MozzarellaBook service.
 type MozzarellaBookServer interface {
 	// Ping 方法
@@ -665,6 +836,7 @@ type MozzarellaBookServer interface {
 	Key(context.Context, *KeyRequest) (*KeyReturn, error)
 	CreateToken(context.Context, *CreateTokenReq) (*CreateTokenResp, error)
 	VerifyToken(context.Context, *VerifyTokenReq) (*VerifyTokenResp, error)
+	RefreshToken(context.Context, *RefreshTokenReq) (*RefreshTokenResp, error)
 }
 
 // UnimplementedMozzarellaBookServer can be embedded to have forward compatible implementations.
@@ -682,6 +854,9 @@ func (*UnimplementedMozzarellaBookServer) CreateToken(context.Context, *CreateTo
 }
 func (*UnimplementedMozzarellaBookServer) VerifyToken(context.Context, *VerifyTokenReq) (*VerifyTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method VerifyToken not implemented")
+}
+func (*UnimplementedMozzarellaBookServer) RefreshToken(context.Context, *RefreshTokenReq) (*RefreshTokenResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
 }
 
 func RegisterMozzarellaBookServer(s *grpc.Server, srv MozzarellaBookServer) {
@@ -760,6 +935,24 @@ func _MozzarellaBook_VerifyToken_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MozzarellaBook_RefreshToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RefreshTokenReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MozzarellaBookServer).RefreshToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pb.MozzarellaBook/RefreshToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MozzarellaBookServer).RefreshToken(ctx, req.(*RefreshTokenReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _MozzarellaBook_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "pb.MozzarellaBook",
 	HandlerType: (*MozzarellaBookServer)(nil),
@@ -780,7 +973,11 @@ var _MozzarellaBook_serviceDesc = grpc.ServiceDesc{
 			MethodName: "VerifyToken",
 			Handler:    _MozzarellaBook_VerifyToken_Handler,
 		},
+		{
+			MethodName: "RefreshToken",
+			Handler:    _MozzarellaBook_RefreshToken_Handler,
+		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "pb/rpc.proto",
+	Metadata: "rpc.proto",
 }

@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"math/rand"
@@ -30,9 +31,9 @@ func CreateRefreshToken(payload []byte, duration time.Duration) (rt string) {
 
 	// 生成refresh_token
 	pre, fix := salt()
-	byte := bytes.Join([][]byte{pre, payload, fix}, nil)
+	b := bytes.Join([][]byte{pre, payload, fix}, nil)
 	sha := sha256.New()
-	sha.Write(byte)
+	sha.Write(b)
 	res := sha.Sum(nil)
 	// refresh_token
 	rt = fmt.Sprintf("%x", res)
@@ -43,10 +44,14 @@ func CreateRefreshToken(payload []byte, duration time.Duration) (rt string) {
 }
 
 // RefreshToken 拿取redis的payload，之后再单独调用createToken
-func RefreshToken(rt string) (payload Payload) {
+func RefreshToken(rt string) (payload Payload, err error) {
 	p := redisdao.Get(rt)
 
-	err := json.Unmarshal(p, &payload)
+	if len(p) == 0 {
+		err = errors.New("rt err")
+		return
+	}
+	err = json.Unmarshal(p, &payload)
 	if err != nil {
 		log.Println("json unmarshal err : ", err)
 	}

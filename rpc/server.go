@@ -17,20 +17,24 @@ type KeyCenter struct {
 }
 
 func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res *pb.CreateTokenResp, err error) {
-	tk, err := token.CreateToken(req.Domain, req.Uid)
+	ac, rt, err := token.CreateToken(req.Domain, req.Uid)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	return &pb.CreateTokenResp{Token: tk}, nil
+	return &pb.CreateTokenResp{
+		Token:        ac,
+		RefreshToken: rt,
+	}, nil
 }
 
 func (k *KeyCenter) VerifyToken(c context.Context, req *pb.VerifyTokenReq) (res *pb.VerifyTokenResp, err error) {
 	err = token.VerifyToken(req.Token)
 	if err != nil {
 		err = errors.New("verify err")
+		return &pb.VerifyTokenResp{Ok: false}, err
 	}
-	return
+	return &pb.VerifyTokenResp{Ok: true}, nil
 }
 
 func (k *KeyCenter) Key(c context.Context, req *pb.KeyRequest) (res *pb.KeyReturn, err error) {
@@ -43,6 +47,22 @@ func (k *KeyCenter) Key(c context.Context, req *pb.KeyRequest) (res *pb.KeyRetur
 
 func (k *KeyCenter) Ping(c context.Context, req *pb.PingRequest) (res *pb.PingReply, err error) {
 	return &pb.PingReply{Pong: "pong"}, nil
+}
+
+func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (res *pb.RefreshTokenResp, err error) {
+	payload, err := token.RefreshToken(req.GetRt())
+	if err != nil {
+		return
+	}
+	ac, rt, err := token.CreateToken(payload.Subject, payload.Uid)
+	if err != nil {
+		return
+	}
+
+	return &pb.RefreshTokenResp{
+		Token:        ac,
+		RefreshToken: rt,
+	}, nil
 }
 
 func InitRpc() {
