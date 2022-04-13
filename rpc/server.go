@@ -66,7 +66,7 @@ func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (re
 }
 
 func InitRpc() {
-	// 监听本地的8972端口
+	// 监听本地的8901端口
 	lis, err := net.Listen("tcp", ":8901")
 	if err != nil {
 		fmt.Printf("failed to listen: %v", err)

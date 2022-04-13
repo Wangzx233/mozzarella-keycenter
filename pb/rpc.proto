@@ -34,7 +34,8 @@ message KeyReturn {
 
 message CreateTokenReq {
   string Domain = 1;
-  string Uid =2;
+  string Uid = 2;
+  //string Openid = 3;
 }
 
 message CreateTokenResp {

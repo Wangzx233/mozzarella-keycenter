@@ -13,6 +13,7 @@ const (
 	ip          = "8.142.81.74"
 	port        = 8901
 	version     = "0.0.1"
+	grpcPort    = "8901"
 )
 
 func InitRegister() {
@@ -44,7 +45,7 @@ func InitRegister() {
 		Port:        port,
 		ServiceName: serviceName,
 		Weight:      10,
-		Metadata:    map[string]string{"version": version, "up-time": time.Now().String()},
+		Metadata:    map[string]string{"version": version, "up-time": time.Now().String(), "gRPC_port": grpcPort},
 		Enable:      true,
 		Healthy:     true,
 		Ephemeral:   true,
