@@ -17,7 +17,7 @@ type KeyCenter struct {
 }
 
 func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res *pb.CreateTokenResp, err error) {
-	ac, rt, err := token.CreateToken(req.Domain, req.Uid)
+	ac, rt, exp, err := token.CreateToken(req.Domain, req.Uid)
 	if err != nil {
 		log.Println(err)
 		return
@@ -54,7 +54,7 @@ func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (re
 	if err != nil {
 		return
 	}
-	ac, rt, err := token.CreateToken(payload.Subject, payload.Uid)
+	ac, rt, exp, err := token.CreateToken(payload.Subject, payload.Uid)
 	if err != nil {
 		return
 	}
@@ -72,7 +72,8 @@ func InitRpc() {
 		fmt.Printf("failed to listen: %v", err)
 		return
 	}
-	s := grpc.NewServer() // 创建gRPC服务器
+
+	s := grpc.NewServer() // 创建gRPC服务
 
 	pb.RegisterMozzarellaBookServer(s, &KeyCenter{}) // 在gRPC服务端注册服务
 
