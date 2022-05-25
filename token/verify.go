@@ -8,6 +8,7 @@ import (
 	"mozzarella-keycenter/cryp"
 	"mozzarella-keycenter/key"
 	"strings"
+	"time"
 )
 
 func VerifyToken(token string) (err error) {
@@ -34,6 +35,11 @@ func VerifyToken(token string) (err error) {
 	err = json.Unmarshal(payload, &p)
 	if err != nil {
 		log.Println("verifyToken err : ", err)
+		return
+	}
+
+	if p.ExpiresAt < time.Now().Unix() {
+		err = errors.New("token expired")
 		return
 	}
 	//拿到签名
