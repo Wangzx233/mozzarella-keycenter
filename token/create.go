@@ -52,6 +52,7 @@ func CreateToken(Domain string, Uid string) (token string, rt string, exp int64,
 	token = strings.Join([]string{pay, signatrue}, ".")
 
 	rt = CreateRefreshToken(bytesPayload, config.RefreshRefreshTokenExpiresTime)
-
+	//将等号替换为%20
+	token = strings.Replace(token, "=", "%20", -1)
 	return
 }

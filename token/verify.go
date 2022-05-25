@@ -11,6 +11,9 @@ import (
 )
 
 func VerifyToken(token string) (err error) {
+	//先将%20替换为=
+	token = strings.Replace(token, "%20", "=", -1)
+
 	part := strings.Split(token, ".")
 	if len(part) < 2 {
 		err = errors.New("token err")
