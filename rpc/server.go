@@ -17,7 +17,7 @@ type KeyCenter struct {
 }
 
 func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res *pb.CreateTokenResp, err error) {
-	ac, rt, err := token.CreateToken(req.Domain, req.Uid)
+	ac, rt, exp, err := token.CreateToken(req.Domain, req.Uid)
 	if err != nil {
 		log.Println(err)
 		return
@@ -25,6 +25,7 @@ func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res 
 	return &pb.CreateTokenResp{
 		Token:        ac,
 		RefreshToken: rt,
+		ExpiredAt:    exp,
 	}, nil
 }
 
@@ -54,7 +55,7 @@ func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (re
 	if err != nil {
 		return
 	}
-	ac, rt, err := token.CreateToken(payload.Subject, payload.Uid)
+	ac, rt, exp, err := token.CreateToken(payload.Subject, payload.Uid)
 	if err != nil {
 		return
 	}
@@ -62,6 +63,7 @@ func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (re
 	return &pb.RefreshTokenResp{
 		Token:        ac,
 		RefreshToken: rt,
+		ExpiredAt:    exp,
 	}, nil
 }
 

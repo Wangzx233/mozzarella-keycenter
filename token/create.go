@@ -11,12 +11,13 @@ import (
 	"time"
 )
 
-func CreateToken(Domain string, Uid string) (token string, rt string, err error) {
+func CreateToken(Domain string, Uid string) (token string, rt string, exp int64, err error) {
+	exp = time.Now().Add(config.DefaultTokenExpiresTime).Unix()
 	//构建payload
 	var payload = Payload{
 		StandardPayload: StandardPayload{
 			Audience:  config.DefaultTokenAudience,
-			ExpiresAt: time.Now().Add(config.DefaultTokenExpiresTime).Unix(),
+			ExpiresAt: exp,
 			Id:        "",
 			IssuedAt:  time.Now().Unix(),
 			Issuer:    config.DefaultTokenIssuer,
