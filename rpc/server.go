@@ -25,6 +25,7 @@ func (k *KeyCenter) CreateToken(c context.Context, req *pb.CreateTokenReq) (res 
 	return &pb.CreateTokenResp{
 		Token:        ac,
 		RefreshToken: rt,
+		ExpiredAt:    exp,
 	}, nil
 }
 
@@ -62,6 +63,7 @@ func (k *KeyCenter) RefreshToken(c context.Context, req *pb.RefreshTokenReq) (re
 	return &pb.RefreshTokenResp{
 		Token:        ac,
 		RefreshToken: rt,
+		ExpiredAt:    exp,
 	}, nil
 }
 

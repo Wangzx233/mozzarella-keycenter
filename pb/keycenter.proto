@@ -41,6 +41,7 @@ message CreateTokenReq {
 message CreateTokenResp {
   string Token = 1;
   string RefreshToken = 2;
+  int64 ExpiredAt =3;
 }
 
 
@@ -59,4 +60,5 @@ message RefreshTokenReq {
 message RefreshTokenResp {
   string Token = 1;
   string RefreshToken = 2;
+  int64 ExpiredAt =3;
 }
